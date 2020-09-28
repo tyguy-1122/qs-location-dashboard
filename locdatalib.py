@@ -59,3 +59,7 @@ def len_of_time_with_epsilon_of_coord_on_time_interval(place, start_time, end_ti
                 sum_time_at_location += int(location_entries[i-1]['timestampMs']) - int(location_entries[index_start_at_loc]['timestampMs'])
 
     return ((float(sum_time_at_location) / 1000) / 60) / 60
+
+def calc_hours_from_list_of_places(places, start_time, end_time, location_entries):
+    # TODO: Generate 'other' category data
+    return [len_of_time_with_epsilon_of_coord_on_time_interval(elem, start_time, end_time, location_entries) for elem in places]
