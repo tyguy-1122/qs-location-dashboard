@@ -25,7 +25,7 @@ def get_locations(filename):
 def is_within_location_range(loc_lat, loc_long, latitude_e7, longitude_e7, epsilon):
     return abs(loc_lat - latitude_e7) <= epsilon and abs(loc_long - longitude_e7) <= epsilon
 
-def len_of_time_with_epsilon_of_cood_on_time_interval(place, start_time, end_time, location_entries):
+def len_of_time_with_epsilon_of_coord_on_time_interval(place, start_time, end_time, location_entries):
     """
     Returns a float representing the number of hours spent at the specified place on the closed interval [start_time, end_time].
 
